@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const garamond = EB_Garamond({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-garamond",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const inter = Inter({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${garamond.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>
