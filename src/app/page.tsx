@@ -187,7 +187,7 @@ const ItemSliders = () => {
             {items.map((item, i) => (
               <div
                 key={i}
-                className="snap-center min-w-[60%] lg:min-w-[calc((100%-30px)/4)] h-full"
+                className="w-[calc((100%-var(--item-gap)*(var(--item-count)-1))/var(--item-count))] flex-shrink-0"
               >
                 <figure className="relative w-full h-full aspect-square bg-teal-900">
                   <div className="absolute inset-0 w-full h-full">

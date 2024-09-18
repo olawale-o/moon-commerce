@@ -1,5 +1,6 @@
 import { CarouselSliderItems } from "../ui/components/CarouselSelider";
 import { NewsLetter } from "../ui/components/Newsletter";
+import "./page.css";
 
 const Teams = [
   {
@@ -22,6 +23,30 @@ const Teams = [
   },
   {
     id: 4,
+    name: "Seren Bowl",
+    positon: "Marketing",
+    asset: "/assets/team_4.png",
+  },
+  {
+    id: 5,
+    name: "Bernie PATTERSON",
+    positon: "CEO & Founder",
+    asset: "/assets/team_1.png",
+  },
+  {
+    id: 6,
+    name: "Ophelia Vase",
+    positon: "Creative Director",
+    asset: "/assets/team_2.png",
+  },
+  {
+    id: 7,
+    name: "CorbiN HOSSAIN",
+    positon: "Artist",
+    asset: "/assets/team_3.png",
+  },
+  {
+    id: 8,
     name: "Seren Bowl",
     positon: "Marketing",
     asset: "/assets/team_4.png",
@@ -171,7 +196,7 @@ const History = () => {
                       How we works
                     </div>
                     <div className="mt-8">
-                      <div>
+                      <div className="flex flex-col space-y-6">
                         <div>
                           <div className="text-neutral-800 font-inter text-lg leading-6 font-semibold">
                             Product design
@@ -196,7 +221,7 @@ const History = () => {
                         </div>
                         <div>
                           <div className="text-neutral-800 font-inter text-lg leading-6 font-semibold">
-                            Crafted
+                            Self Product
                           </div>
                           <div className="mt-6">
                             <div className="text-neutral-700 text-base leading-6 font-inter font-normal">
@@ -222,35 +247,40 @@ const TeamSlider = () => {
   return (
     <section>
       <div className="max-w-[1440px] mx-auto">
-        <div className="p-[30px] xl:px-[165px] xl:py-20 ">
-          <CarouselSliderItems>
-            {Teams.map((team, i) => (
-              <div
-                key={i}
-                className="snap-center min-w-[60%] lg:min-w-[calc((100%-30px)/4)] h-full"
-              >
-                <figure className="relative w-full h-full aspect-square bg-teal-900">
-                  <div className="absolute inset-0 w-full h-full">
-                    <img
-                      src={team.asset}
-                      alt="image"
-                      className="object-cover absolute inset-0 w-full h-full"
-                    />
-                  </div>
-                </figure>
-                <div className="mt-[23px]">
-                  <div className="text-center text-[#3A3845] font-inter text-lg leading-6 tracking-[1.08px] font-bold">
-                    {team.name}
-                  </div>
-                  <div className="mt-3">
-                    <div className="text-center text-neutral-600 font-inter text-sm leading-[22px] font-normal">
-                      {team.positon}
+        <div className="p-[30px] xl:px-[165px] xl:py-20">
+          <h3 className="text-4xl leading-9 font-bold text-center">
+            MEET OUR TEAM
+          </h3>
+          <div className="flex w-full flex-col min-h-full relative mt-12">
+            <CarouselSliderItems>
+              {Teams.map((team, i) => (
+                <div
+                  key={i}
+                  className="w-[calc((100%-var(--item-gap)*(var(--item-count)-1))/var(--item-count))] flex-shrink-0"
+                >
+                  <figure className="relative aspect-square bg-teal-900">
+                    <div className="absolute inset-0 w-full h-full">
+                      <img
+                        src={team.asset}
+                        alt="image"
+                        className="object-cover absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </figure>
+                  <div className="mt-[23px]">
+                    <div className="text-center text-[#3A3845] font-inter text-lg leading-6 tracking-[1.08px] font-bold">
+                      {team.name}
+                    </div>
+                    <div className="mt-3">
+                      <div className="text-center text-neutral-600 font-inter text-sm leading-[22px] font-normal">
+                        {team.positon}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </CarouselSliderItems>
+              ))}
+            </CarouselSliderItems>
+          </div>
         </div>
       </div>
     </section>

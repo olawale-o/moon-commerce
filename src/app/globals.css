@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --bg-color: red;
+}
+
 body {
     font-family: var(--font-garammond), var(--font-g), var(--font-inter),
         sans-serif;
