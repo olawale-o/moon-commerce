@@ -1,0 +1,15 @@
+.home-hero {
+    background-image: url("/assets/sm-home_hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+@media screen and (min-width: 1024px) {
+    .home-hero {
+        background-image: url("/assets/home_hero.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
