@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Inter } from "next/font/google";
-import "./globals.css";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 
-const garamond = EB_Garamond({
+import "./globals.css";
+import { Header } from "./ui/components/Header";
+import { Footer } from "./ui/components/Footer";
+
+const garamond = Cormorant_Garamond({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-garamond",
 });
 const inter = Inter({
-  weight: ["400", "700"],
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
   variable: "--font-inter",
 });
@@ -26,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${garamond.variable} ${inter.variable} antialiased`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
