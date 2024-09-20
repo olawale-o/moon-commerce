@@ -341,7 +341,7 @@ const History = () => {
 
                     <div className="mt-8">
                       <Link
-                        href="/"
+                        href="/about"
                         className="underline px-[15px] py-[18px] text-neutral-700 text-sm leading-5 tracking-[0.84px] font-bold"
                       >
                         LEARN MORE
@@ -382,7 +382,7 @@ const History = () => {
 
                     <div className="mt-8">
                       <Link
-                        href="/"
+                        href="/about"
                         className="underline px-[15px] py-[18px] text-neutral-700 text-sm leading-5 tracking-[0.84px] font-bold"
                       >
                         LEARN MORE
