@@ -183,29 +183,31 @@ const ItemSliders = () => {
     <section>
       <div className="max-w-[1440px] mx-auto">
         <div className="p-[30px] xl:px-[165px] xl:py-20 ">
-          <CarouselSliderItems>
-            {items.map((item, i) => (
-              <div
-                key={i}
-                className="w-[calc((100%-var(--item-gap)*(var(--item-count)-1))/var(--item-count))] flex-shrink-0"
-              >
-                <figure className="relative w-full h-full aspect-square bg-teal-900">
-                  <div className="absolute inset-0 w-full h-full">
-                    <img
-                      src={item.asset}
-                      alt="image"
-                      className="object-cover absolute inset-0 w-full h-full"
-                    />
-                  </div>
-                </figure>
-                <div className="mt-[23px]">
-                  <div className="text-center text-[#3A3845] font-inter text-lg leading-6 tracking-[1.08px] font-bold">
-                    {item.name}
+          <div className="flex w-full flex-col min-h-full relative">
+            <CarouselSliderItems>
+              {items.map((item, i) => (
+                <div
+                  key={i}
+                  className="w-[calc((100%-var(--item-gap)*(var(--item-count)-1))/var(--item-count))] flex-shrink-0"
+                >
+                  <figure className="relative aspect-square">
+                    <div className="absolute inset-0 w-full h-full">
+                      <img
+                        src={item.asset}
+                        alt="image"
+                        className="object-cover absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </figure>
+                  <div className="mt-[23px]">
+                    <div className="text-center text-[#3A3845] font-inter text-lg leading-6 tracking-[1.08px] font-bold">
+                      {item.name}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </CarouselSliderItems>
+              ))}
+            </CarouselSliderItems>
+          </div>
         </div>
       </div>
     </section>
