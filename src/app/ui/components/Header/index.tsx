@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 const links = [
@@ -12,35 +13,37 @@ const Header = () => {
         <div className="p-5 xl:px-[165px] xl:py-7">
           <div className="flex justify-between">
             <div className="xl:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="16"
-                viewBox="0 0 18 16"
-                fill="none"
-              >
-                <path
-                  d="M1 1.10352H17"
-                  stroke="#595667"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M1 14.8965H17"
-                  stroke="#595667"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M1 8H17"
-                  stroke="#595667"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <button type="button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="16"
+                  viewBox="0 0 18 16"
+                  fill="none"
+                >
+                  <path
+                    d="M1 1.10352H17"
+                    stroke="#595667"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M1 14.8965H17"
+                    stroke="#595667"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M1 8H17"
+                    stroke="#595667"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
             </div>
             <Link href="/">
               <svg
