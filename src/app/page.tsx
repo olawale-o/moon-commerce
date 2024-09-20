@@ -305,7 +305,7 @@ const BestSellers = () => {
                     type="button"
                     className="px-[15px] py-[18px] inline-flex justify-center border-solid border-[1px] border-neutral-800 w-full"
                   >
-                    ADD TO CART
+                    GET QUOTE
                   </button>
                 </div>
               </div>
@@ -451,7 +451,7 @@ const NewArrivals = () => {
                     type="button"
                     className="px-[15px] py-[18px] inline-flex justify-center border-solid border-[1px] border-neutral-800 w-full"
                   >
-                    ADD TO CART
+                    GET QUOTE
                   </button>
                 </div>
               </div>
